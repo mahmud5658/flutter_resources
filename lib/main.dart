@@ -13,11 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Colors.deepPurple,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.deepPurple
+        ),
         brightness: Brightness.dark,
       ),
       home: const ContainerSized(),
     );
   }
 }
-
-
