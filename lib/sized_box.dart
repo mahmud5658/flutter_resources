@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-// ignore: camel_case_types
-class ContainerSized extends StatelessWidget {
-  const ContainerSized({super.key});
+class SizedBoxW extends StatelessWidget {
+  const SizedBoxW({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +99,8 @@ class ContainerSized extends StatelessWidget {
       //     ),
       //   ),
       // ),
+
+      
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resources/constainer_sized.dart';
+import 'package:flutter_resources/sized_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         // brightness: Brightness.dark,
       ),
-      home: const ContainerSized(),
+      home: const SizedBoxW(),
     );
   }
 }
