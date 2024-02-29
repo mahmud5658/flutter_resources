@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resources/widgets/container.dart';
+import 'package:flutter_resources/widgets/column.dart';
+// import 'package:flutter_resources/widgets/container.dart';
+// import 'package:flutter_resources/widgets/rows.dart';
+// import 'package:flutter_resources/widgets/wrap.dart';
 // import 'package:flutter_resources/widgets/sized_box.dart';
 
 void main() {
@@ -15,13 +18,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.deepPurple,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.deepPurple
-        ),
-        // brightness: Brightness.dark,
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.deepPurple),
+        brightness: Brightness.dark,
       ),
-      home: const Containerw(
-      ),
+      home: const Columns(),
     );
   }
 }
