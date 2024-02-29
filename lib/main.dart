@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.deepPurple
         ),
-        brightness: Brightness.dark,
+        // brightness: Brightness.dark,
       ),
       home: const ContainerSized(),
     );
