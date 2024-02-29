@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resources/sized_box.dart';
+import 'package:flutter_resources/widgets/sized_box.dart';
 
 void main() {
   runApp(const MyApp());
