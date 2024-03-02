@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resources/widgets/list_builder.dart';
 // import 'package:flutter_resources/widgets/elevated_button.dart';
-import 'package:flutter_resources/widgets/list_view.dart';
+// import 'package:flutter_resources/widgets/list_view.dart';
 // import 'package:flutter_resources/widgets/column.dart';
 // import 'package:flutter_resources/widgets/text_button.dart';
 // import 'package:flutter_resources/widgets/container.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
         brightness: Brightness.dark,
       ),
-      home: const ListViewWidget(),
+      home:  const ListBuilderW(),
     );
   }
 }
