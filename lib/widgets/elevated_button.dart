@@ -18,7 +18,8 @@ class ElevatedButtonw extends StatelessWidget {
               width: 200,
               child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColor),
+                    backgroundColor: MaterialStateProperty.all(
+                        Theme.of(context).primaryColor),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -26,12 +27,11 @@ class ElevatedButtonw extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    print('Elevated Button Click');
+                    snackBar(context, "Elevated Button is Clicked");
                   },
                   child: const Text(
                     'Hello',
-                    style: TextStyle(
-                        fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   )),
             ),
           )
@@ -39,4 +39,9 @@ class ElevatedButtonw extends StatelessWidget {
       ),
     );
   }
+}
+
+snackBar(context, message) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
 }

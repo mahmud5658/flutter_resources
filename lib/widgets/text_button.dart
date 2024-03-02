@@ -15,7 +15,7 @@ class TextButtonW extends StatelessWidget {
           Center(
             child: TextButton(
               onPressed: () {
-                print("Hello Button Click");
+                snackBar(context, "Text Button is Clicked");
               },
               style: ButtonStyle(
                 padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
@@ -38,4 +38,9 @@ class TextButtonW extends StatelessWidget {
       ),
     );
   }
+}
+
+snackBar(context, message) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
 }

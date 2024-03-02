@@ -28,7 +28,7 @@ class ListBuilderW extends StatelessWidget {
           return Card(
             child: ListTile(
               onTap: () {
-                print(fruits['fruits'][index]);
+                snackBar(context, "You click:${fruits['fruits'][index]}");
               },
               leading: const Icon(Icons.person),
               title: Text(fruits['fruits'][index]),
@@ -39,4 +39,9 @@ class ListBuilderW extends StatelessWidget {
       ),
     );
   }
+}
+
+snackBar(context, message) {
+  return ScaffoldMessenger.of(context)
+      .showSnackBar(SnackBar(content: Text(message)));
 }
