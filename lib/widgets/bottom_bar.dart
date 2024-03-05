@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resources/widgets/alert_dialog.dart';
+import 'package:flutter_resources/widgets/elevated_button.dart';
+import 'package:flutter_resources/widgets/grid_view.dart';
+import 'package:flutter_resources/widgets/list_builder.dart';
 
 class BottomNaviagtionWidget extends StatefulWidget {
   const BottomNaviagtionWidget({super.key});
@@ -9,17 +13,21 @@ class BottomNaviagtionWidget extends StatefulWidget {
 
 class _BottomNaviagtionWidgetState extends State<BottomNaviagtionWidget> {
   int selectedIndex = 0;
-  List<Widget> widgets = [
-    const Text("Home"),
-    const Text("Search"),
-    const Text("Add"),
-    const Text("Profile")
-  ];
+
+  PageController pageController = PageController();
+  // List<Widget> widgets = [
+  //   const Text("Home"),
+  //   const Text("Search"),
+  //   const Text("Add"),
+  //   const Text("Profile")
+  // ];
 
   void onTapped(int index) {
     setState(() {
       selectedIndex = index;
     });
+
+    pageController.jumpToPage(index);
   }
 
   @override
@@ -29,7 +37,15 @@ class _BottomNaviagtionWidgetState extends State<BottomNaviagtionWidget> {
           title: const Text('Bottom Navigaton Bar',
               style: TextStyle(color: Colors.white)),
         ),
-        body: Center(child: widgets.elementAt(selectedIndex)),
+        body: PageView(
+          controller: pageController,
+          children: const [
+            AlertWidget(),
+            ListBuilderW(),
+            ElevatedButtonw(),
+            GridViewW(),
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
