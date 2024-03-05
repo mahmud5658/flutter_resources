@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resources/widgets/alert_dialog.dart';
+// import 'package:flutter_resources/widgets/alert_dialog.dart';
+import 'package:flutter_resources/widgets/bottom_sheet.dart';
 // import 'package:flutter_resources/widgets/dismissable.dart';
 // import 'package:flutter_resources/widgets/drawer.dart';
 // import 'package:flutter_resources/widgets/image.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
         brightness: Brightness.dark,
       ),
-      home:  const AlertWidget(),
+      home:  const BottomSheetWidget(),
     );
   }
 }
