@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resources/widgets/column.dart';
-// import 'package:flutter_resources/widgets/container.dart';
-// import 'package:flutter_resources/widgets/rows.dart';
-// import 'package:flutter_resources/widgets/wrap.dart';
-// import 'package:flutter_resources/widgets/sized_box.dart';
+import 'package:flutter_resources/pages/home.dart';
+import 'package:flutter_resources/utils/color.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -17,11 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.deepPurple,
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.deepPurple),
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
+        primaryColor: AppColor.bgColor,
       ),
-      home: const Columns(),
+      home: const Home(),
     );
   }
 }
