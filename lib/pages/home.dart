@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_resources/pages/content.dart';
 import 'package:flutter_resources/utils/color.dart';
 
 class Home extends StatelessWidget {
@@ -13,6 +14,10 @@ class Home extends StatelessWidget {
           margin: const EdgeInsets.all(15),
           height: 250,
           width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            boxShadow: AppColor.shadows,
+          ),
+          child: const Content(),
         ),
       )
     );
