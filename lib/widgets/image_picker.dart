@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -9,7 +11,7 @@ class ImagePickerWidget extends StatefulWidget {
 }
 
 class _ImagePickerWidgetState extends State<ImagePickerWidget> {
-  ImagePicker _picker = ImagePicker();
+  final ImagePicker _picker = ImagePicker();
   XFile? file;
   @override
   Widget build(BuildContext context) {
@@ -25,10 +27,28 @@ class _ImagePickerWidgetState extends State<ImagePickerWidget> {
               height: 300,
               width: 300,
               color: Colors.grey.shade400,
-              child: const Center(child: Text('Image not found')),
+              child: Center(
+                child: file == null
+                    ? const Text('Image not found')
+                    : Image.file(
+                        File(file!.path),
+                        fit: BoxFit.contain,
+                      ),
+              ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () async {
+                final XFile photo = await _picker.pickImage(
+                    source: ImageSource.gallery) as XFile;
+
+                setState(
+                  () {
+                    file = photo;
+                  },
+                );
+                print('Image Picked');
+                print(photo.path);
+              },
               child: const Text('Pick Image'),
             ),
           ],
