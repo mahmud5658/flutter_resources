@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_resources/widgets/drop_down.dart';
-import 'package:flutter_resources/widgets/ui_1.dart';
+// import 'package:flutter_resources/widgets/ui_1.dart';
+import 'package:flutter_resources/widgets/ui_2.dart';
 // import 'package:flutter_resources/widgets/image_picker.dart';
 // import 'package:flutter_resources/widgets/animated_text.dart';
 // import 'package:flutter_resources/widgets/bottom_bar.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
         brightness: Brightness.light,
       ),
-      home:  const Ui1(),
+      home:  const CloneInsta(),
     );
   }
 }
