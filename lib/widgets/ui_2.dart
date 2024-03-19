@@ -35,7 +35,7 @@ class CloneInsta extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         CircleAvatar(
-                          radius: 60,
+                          radius: 50,
                           backgroundImage: NetworkImage(
                               'https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1380&t=st=1710860819~exp=1710861419~hmac=e309a2ccc2e8191406c07118b95d377dda81c782d2de5d66ecad3b55fa684a57'),
                         ),
@@ -48,18 +48,19 @@ class CloneInsta extends StatelessWidget {
                         ),
                         Text(
                           "Photographer/NewYork",
-                          style: TextStyle(fontSize: 14, color: Colors.black),
+                          style: TextStyle(fontSize: 14, color: Colors.red),
                         ),
                       ],
                     ),
                   ),
                   Expanded(
                     child: Container(
-                      color: Colors.orange,
+                      padding: const EdgeInsets.all(10),
+                      // color: Colors.orange,
                       child: Column(
                         children: [
                           Container(
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Column(
@@ -70,7 +71,8 @@ class CloneInsta extends StatelessWidget {
                                     ),
                                     Text(
                                       'Posts',
-                                      style: TextStyle(fontSize: 14),
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.red),
                                     ),
                                   ],
                                 ),
@@ -78,11 +80,13 @@ class CloneInsta extends StatelessWidget {
                                   children: [
                                     Text(
                                       '5K',
-                                      style: TextStyle(fontSize: 24),
+                                      style: TextStyle(
+                                          fontSize: 24, color: Colors.black),
                                     ),
                                     Text(
                                       'Followers',
-                                      style: TextStyle(fontSize: 14),
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.red),
                                     ),
                                   ],
                                 ),
@@ -94,12 +98,16 @@ class CloneInsta extends StatelessWidget {
                                     ),
                                     Text(
                                       'Following',
-                                      style: TextStyle(fontSize: 14),
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.red),
                                     ),
                                   ],
                                 ),
                               ],
                             ),
+                          ),
+                          const SizedBox(
+                            height: 10,
                           ),
                           Container(
                             child: Row(
@@ -110,12 +118,20 @@ class CloneInsta extends StatelessWidget {
                                     // width: 100,
                                     child: ElevatedButton(
                                       style: ButtonStyle(
-                                         
+                                        backgroundColor:
+                                            MaterialStateProperty.all(
+                                                Colors.blue),
                                       ),
                                       onPressed: () {},
-                                      child: const Text('Follow'),
+                                      child: const Text(
+                                        'Follow',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     ),
                                   ),
+                                ),
+                                const SizedBox(
+                                  width: 5,
                                 ),
                                 Container(
                                   height: 50,
@@ -123,9 +139,13 @@ class CloneInsta extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                     color: Colors.white,
-                                    border: Border.all(color: Colors.blue,width: 2),
+                                    border: Border.all(
+                                        color: Colors.blue, width: 2),
                                   ),
-                                  child: Icon(Icons.arrow_downward,color: Colors.blue,),
+                                  child: const Icon(
+                                    Icons.arrow_downward,
+                                    color: Colors.blue,
+                                  ),
                                 ),
                               ],
                             ),
