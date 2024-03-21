@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resources/ostad_record/home_activity.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -15,12 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // primarySwatch: Colors.amber,
-        primaryColor: Colors.pink,
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
-        brightness: Brightness.light,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green,
+          brightness: Brightness.light,
+        ),
       ),
-      home:  const HomeActivity(),
+      home: const HomeActivity(),
     );
   }
 }
