@@ -1,31 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_resources/widgets/drop_down.dart';
-// import 'package:flutter_resources/widgets/ui_1.dart';
-import 'package:flutter_resources/widgets/ui_2.dart';
-// import 'package:flutter_resources/widgets/image_picker.dart';
-// import 'package:flutter_resources/widgets/animated_text.dart';
-// import 'package:flutter_resources/widgets/bottom_bar.dart';
-// import 'package:flutter_resources/widgets/form.dart';
-// import 'package:flutter_resources/widgets/stack.dart';
-// import 'package:flutter_resources/widgets/tabbar.dart';
-// import 'package:flutter_resources/widgets/alert_dialog.dart';
-// import 'package:flutter_resources/widgets/bottom_sheet.dart';
-// import 'package:flutter_resources/widgets/dismissable.dart';
-// import 'package:flutter_resources/widgets/drawer.dart';
-// import 'package:flutter_resources/widgets/image.dart';
-// import 'package:flutter_resources/widgets/image_cach.dart';
-// import 'package:flutter_resources/widgets/grid_builder.dart';
-// import 'package:flutter_resources/widgets/snack_bar.dart';
-// import 'package:flutter_resources/widgets/grid_view.dart';
-// import 'package:flutter_resources/widgets/list_builder.dart';
-// import 'package:flutter_resources/widgets/elevated_button.dart';
-// import 'package:flutter_resources/widgets/list_view.dart';
-// import 'package:flutter_resources/widgets/column.dart';
-// import 'package:flutter_resources/widgets/text_button.dart';
-// import 'package:flutter_resources/widgets/container.dart';
-// import 'package:flutter_resources/widgets/rows.dart';
-// import 'package:flutter_resources/widgets/wrap.dart';
-// import 'package:flutter_resources/widgets/sized_box.dart';
+import 'package:flutter_resources/ostad_record/home_activity.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +20,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(backgroundColor: Colors.purple),
         brightness: Brightness.light,
       ),
-      home:  const CloneInsta(),
+      home:  const HomeActivity(),
     );
   }
 }
